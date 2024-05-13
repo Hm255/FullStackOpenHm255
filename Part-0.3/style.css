@@ -1,0 +1,322 @@
+body {
+    /* Center the form on the page */
+    text-align: center;
+  }
+  
+  /* form {
+    display: inline-block;
+    Form outline 
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  } */
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    min-width: 90px;
+    text-align: left;
+  }
+  
+  /*input,*/
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textarea's have a monospace font */
+    font: 1em sans-serif;
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    /* Match form field borders */
+    border: 1px solid #999;
+      /* Align multiline text fields with their labels */
+      vertical-align: top;
+      /* Provide space to type some text */
+      height: 5em;
+  }
+  
+  input:focus,
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+  }
+  .button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+  }
+  
+  /* button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+   /* margin-left: 0.5em;
+  } */
+  #resizeable{
+    resize:both !important;
+  }
+  #tempB{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: vertical-lr;
+    width: 200px;
+  }
+  option {
+    padding: 0;
+  }
+  
+  input[type="range"] {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+      /* appearance: none;
+      background: red;
+      height: 2px;
+      padding: 0;
+      outline: 1px solid transparent; */
+  }
+  
+  body {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  form > div {
+    margin-bottom: 20px;
+  }
+  
+  select {
+    appearance: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper::after {
+    content: "▼";
+    font-size: 1rem;
+    top: 3px;
+    right: 10px;
+    position: absolute;
+  }
+  
+  button,
+  label,
+  input,
+  select,
+  progress,
+  meter {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+  }
+  
+  input[type="text"],
+  input[type="datetime-local"],
+  input[type="color"],
+  select {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  button {
+    width: 60%;
+    margin: 0 auto;
+  }
+  input[type="file"] {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  label[for="file"] {
+    box-shadow: 1px 1px 3px #ccc;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid rgb(169, 169, 169);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  label[for="file"]:hover {
+    background: linear-gradient(to bottom, #fff, #ddd);
+  }
+  
+  label[for="file"]:active {
+    box-shadow: inset 1px 1px 3px #ccc;
+  }
+  input:required {
+    border: 1px solid black;
+  }
+  
+  input:optional {
+    border: 1px solid silver;
+  }
+  input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    /* Adjusts the position of the checkboxes on the text baseline */
+    vertical-align: -2px;
+    outline: none;
+  }  
+  
+  input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+  }
+  input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+  }
+  fieldset > div {
+    margin: auto;
+    padding : 20px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  input + span {
+    position: relative;
+  }
+  
+  input:required + span::after {
+    /* font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    top: -26px;
+    left: -70px; */
+    color: white;
+  background-color: black;
+  content: "Required";
+  left: -70px;
+  }
+  input + span::before {
+    position: absolute;
+    right: -20px;
+    top: 5px;
+  }
+  
+  input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:invalid + span::before {
+    content: "✖";
+    color: red;
+  }
+  
+  input:valid + span::before {
+    content: "✓";
+    color: green;
+  }
+  input + span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    padding: 5px 10px;
+    top: -26px;
+  }
+  input:out-of-range + span::after {
+    color: white;
+    background-color: red;
+    width: 155px;
+    content: "Outside allowable value range";
+    left: -182px;
+  }
+  input[type="text"]:disabled {
+    background: #eee;
+    border: 1px solid #ccc;
+  }
+  
+  .disabled-label {
+    color: #aaa;
+  }
+  input:read-only,
+  textarea:read-only {
+    border: 0;
+    box-shadow: none;
+    background-color: white;
+  }
+  
+  textarea:read-write {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+  }
+  input ~ span {
+    position: relative;
+  }
+  
+  input:default ~ span::after {
+    font-size: 0.7rem;
+    position: absolute;
+    content: "Default";
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    right: -65px;
+    top: -3px;
+  }
+  input[type="radio"]:indeterminate {
+    outline: 2px solid red;
+    animation: 0.4s linear infinite alternate outline-pulse;
+  }
+  
+  @keyframes outline-pulse {
+    from {
+      outline: 2px solid red;
+    }
+  
+    to {
+      outline: 6px solid red;
+    }
+  }
+  

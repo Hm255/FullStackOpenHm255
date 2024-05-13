@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My test page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <p>This is my page</p>
+    <p>Required fields are followed by <span aria-label="required">*</span>.</p>
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+              </li>
+              <li>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+              </li>
+              <li>
+                <label for="msg">Message:</label>
+                <textarea id="msg" name="user_message"></textarea>
+              </li>
+              <li class="button">
+                <button type="submit">Send your message</button>
+              </li>              
+            </ul>
+          </form>
+          <br>
+          <br>
+          <br>
+          <form> 
+            <fieldset>
+              <legend>Fruit juice size</legend>
+              <p>
+                <input type="radio" name="size" id="size_1" value="small" />
+                <label for="size_1">Small</label>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_2" value="medium" />
+                <label for="size_2">Medium</label>
+              </p>
+              <p>
+                <input type="radio" name="size" id="size_3" value="large" />
+                <label for="size_3">Large</label>
+              </p>
+            </fieldset>
+          </form>    
+          <br>
+          <br>
+          <br>
+          <form>
+            <p>
+              <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
+              <label for="taste_1">I like cherry</label>
+            </p>
+            <p>
+              <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
+              <label for="taste_2">I like banana</label>
+            </p>
+          </form>
+          <div>
+            <label for="username">Name: <span aria-label="required">*</span></label>
+            <input id="username" type="text" name="username" required />
+          </div>     
+        
+          <div>
+          <label for="age">Age: <span aria-label="required">*</span></label>
+          <input type="number" name="age" id="age" min="1" max="10" step="2" />
+        </div>
+        <div>
+          <label for="pennies">Pennies: <span aria-label="required">*</span></label>
+          <input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
+           </div>
+           <label for="price">Choose a maximum house price: </label>
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
+<output class="price-output" for="price"></output>
+<br>
+<input type="datetime-local" name="datetime" id="datetime" />
+<br>
+<br>
+<input type="month" name="month" id="month" />
+<br>
+<br>
+<input type="time" name="time" id="time" />
+<br>
+<br>
+<input type="week" name="week" id="week" />
+<br>
+<br>
+<label for="myDate">When are you available this summer?</label>
+<input
+  type="date"
+  name="myDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="myDate" />
+<br>
+<br>
+<input type="color" name="color" id="color" />
+<br>
+<br>
+<textarea id="resizeable" cols="30" rows="8">hey</textarea>
+<blockquote contenteditable="true">
+    <p>Edit this content to add your own quote</p>
+  </blockquote>
+  
+  <cite contenteditable="true">-- Write your own name here</cite>
+  <br>
+  <br>
+  <select id="simple" name="simple">
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </select>  
+  <br>
+  <br>
+  <select id="groups" name="groups">
+    <optgroup label="fruits">
+      <option value="banana">Banana</option>
+      <option value="cherry" selected>Cherry</option>
+      <option value="Lemon">Lemon</option>
+    </optgroup>
+    <optgroup label="vegetables">
+      <option value="carrot">Carrot</option>
+      <option value="eggplant">Eggplant</option>
+      <option value="potato">Potato</option>
+    </optgroup>
+  </select>
+  <br>
+  <br>
+  <div>
+  <label for="fruit">Enter a fruit</label>
+<input type="text" size="15" id="fruit" />
+  </div>
+  <div>
+<label for="vegetable">Enter a vegetable</label>
+<input type="text" id="vegetable" />
+  </div>
+<div>
+<select name="fruits" size="5">
+  <option>banana</option>
+  <option>cherry</option>
+  <option>strawberry</option>
+  <option>durian</option>
+  <option>blueberry</option>
+</select>
+</div>
+<div>
+<select name="vegetables" size="5">
+  <option>carrot</option>
+  <option>cucumber</option>
+  <option>cauliflower</option>
+  <option>celery</option>
+  <option>collard greens</option>
+</select>
+</div>
+<br>
+<br>
+<p>multiple section below (use ctrl/cmd)</p>
+<select id="multi" name="multi" multiple size="2">
+    <optgroup label="fruits">
+      <option>Banana</option>
+      <option selected>Cherry</option>
+      <option>Lemon</option>
+    </optgroup>
+    <optgroup label="vegetables">
+      <option>Carrot</option>
+      <option>Eggplant</option>
+      <option>Potato</option>
+    </optgroup>
+  </select>
+<br>
+<br>  
+<label for="myFruit">What is your favorite fruit? (With fallback)</label>
+<input type="text" id="myFruit" name="fruit" list="fruitList" />
+<datalist id="fruitList">
+  <label for="suggestion">or pick a fruit</label>
+  <select id="suggestion" name="altFruit">
+    <option>Apple</option>
+    <option>Banana</option>
+    <option>Blackberry</option>
+    <option>Blueberry</option>
+    <option>Lemon</option>
+    <option>Lychee</option>
+    <option>Peach</option>
+    <option>Pear</option>
+  </select>
+</datalist>
+<br>
+<br>
+
+<label for="tempB">Choose a comfortable temperature:</label><br />
+<input type="range" id="tempB" name="tempB" list="values" step="1" />
+
+<datalist id="values">
+    <optgroup>
+  <option value="0" label="very cold!"></option>
+  <option value="25" label="cool"></option>
+  <option value="50" label="medium"></option>
+  <option value="75" label="getting warm!"></option>
+  <option value="100" label="hot!"></option>
+    </optgroup>
+</datalist>
+<output class="temp-output" for="tempB"></output>
+<br>
+<br>
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+<br>
+<br>
+<label for="fuel">Fuel level:</label>
+
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">at 50/100</meter>
+<br>
+<br>
+<label for="select">Select a fruit</label>
+<div class="select-wrapper">
+  <select id="select" name="select">
+    <option>Banana</option>
+    <option>Cherry</option>
+    <option>Lemon</option>
+  </select>
+</div>
+<p>Required fields are labeled with "required".</p>
+<form>
+  <fieldset>
+    <legend>Feedback form</legend>
+    <div>
+      <label for="fname">First name: </label>
+      <input id="fname" name="fname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="lname">Last name: </label>
+      <input id="lname" name="lname" type="text" required />
+      <span></span>
+    </div>
+    <div>
+      <label for="age">Age (must be 12+): </label>
+      <input id="age" name="age" type="number" min="12" max="120" required />
+      <span></span>
+    </div>    
+    <div>
+      <label for="email">
+        Email address (include if you want a response):
+      </label>
+      <input id="email" name="email" type="email" />
+      <span></span>
+    </div>
+    <div><button>Submit</button></div>
+  </fieldset>
+</form>
+<form>
+  <fieldset id="shipping">
+    <legend>Shipping address</legend>
+    <!-- <div>
+      <label for="name">Name: </label>
+      <input id="name" name="name" type="text" value="Mr Soft" readonly />
+    </div>     -->
+    <div>
+      <label for="name1">Name: </label>
+      <input id="name1" name="name1" type="text" value="Mr Soft" readonly />
+    </div>
+    <div>
+      <label for="address1">Address: </label>
+      <input id="address1" name="address1" type="text" required />
+    </div>
+    <div>
+      <label for="pcode1">Zip/postal code: </label>
+      <input id="pcode1" name="pcode1" type="text" required />
+    </div>
+  </fieldset>
+  <fieldset id="billing">
+    <legend>Billing address</legend>
+    <div>
+      <label for="billing-checkbox">Same as shipping address:</label>
+      <input type="checkbox" id="billing-checkbox" checked />
+    </div>
+    <div>
+      <label for="name" class="billing-label disabled-label">Name: </label>
+      <input id="name" name="name" type="text" disabled required />
+    </div>
+    <div>
+      <label for="address2" class="billing-label disabled-label">
+        Address:
+      </label>
+      <input id="address2" name="address2" type="text" disabled required />
+    </div>
+    <div>
+      <label for="pcode2" class="billing-label disabled-label">
+        Zip/postal code:
+      </label>
+      <input id="pcode2" name="pcode2" type="text" disabled required />
+    </div>
+  </fieldset>
+
+  <div><button>Submit</button></div>
+</form>
+<form>
+  <fieldset>
+    <legend>Choose your favourite fruit</legend>
+
+    <p>
+      <input type="radio" name="fruit" value="cherry" id="cherry">
+      <label for="cherry">Cherry</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="banana" id="banana" checked>
+      <label for="banana">Banana</label>
+      <span></span>
+    </p>
+    <p>
+      <input type="radio" name="fruit" value="strawberry" id="strawberry">
+      <label for="strawberry">Strawberry</label>
+      <span></span>
+    </p>
+  </fieldset>
+</form>
+
+  </body>
+  <script>
+    const price = document.querySelector("#price");
+    const output = document.querySelector(".price-output");
+    
+    output.textContent = price.value;
+    
+    price.addEventListener("input", () => {
+      output.textContent = price.value;
+    });
+
+    const temp = document.querySelector("#tempB");
+    const tempOutput = document.querySelector(".temp-output");
+
+    tempOutput.textContent = temp.value;
+    
+    temp.addEventListener("input", () => {
+      tempOutput.textContent = temp.value;
+    });
+
+    // Wait for the page to finish loading
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+    // Attach `change` event listener to checkbox
+    document
+      .getElementById("billing-checkbox")
+      .addEventListener("change", toggleBilling);
+  },
+  false,
+);
+
+function toggleBilling() {
+  // Select the billing text fields
+  const billingItems = document.querySelectorAll('#billing input[type="text"]');
+  // Select the billing text labels
+  const billingLabels = document.querySelectorAll(".billing-label");
+
+  // Toggle the billing text fields and labels
+  for (let i = 0; i < billingItems.length; i++) {
+    billingItems[i].disabled = !billingItems[i].disabled;
+
+    if (
+      billingLabels[i].getAttribute("class") === "billing-label disabled-label"
+    ) {
+      billingLabels[i].setAttribute("class", "billing-label");
+    } else {
+      billingLabels[i].setAttribute("class", "billing-label disabled-label");
+    }
+  }
+}
+
+    </script>
+</html>
